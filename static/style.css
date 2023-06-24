@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Ubuntu&display=swap');
 
 body {
     font-family: Arial, sans-serif;
@@ -46,4 +46,42 @@ button {
 
 .weather-details p {
     font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+span{
+    font-weight: 900;
+}
+
+   /* Custom table styling */
+   table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #444;
+    font-size: 30px;
+    font-family:'Ubuntu', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr>td:nth-child(odd){
+    color: purple
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }
