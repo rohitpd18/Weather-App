@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form action="/" method="post">
+        <input type="text" name="city" placeholder="Enter a city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if error_msg %}
+        <p class="error">{{ error_msg }}</p>
+    {% endif %}
+
+    <h2>Or get weather report by your location:</h2>
+    <button id="location-btn" onclick="getLocation()">Get My Location</button>
+
+    <form id="location-form" action="/weather_by_location" method="post" style="display: none;">
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+        <button type="submit">Get Weather for My Location</button>
+    </form>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+            document.getElementById("location-form").submit();
+        }
+    </script>
+</body>
+</html>

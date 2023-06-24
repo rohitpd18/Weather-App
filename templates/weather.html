@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ weather_data.city }}</h1>
+    <div class="weather-details">
+        <img src="http://openweathermap.org/img/wn/{{weather_data.icon}}.png" alt="Weather Icon">
+        <p>Longitude: {{ weather_data.longitude }}</p>
+        <p>Latitude: {{ weather_data.latitude }}</p>
+        <p>Weather: {{ weather_data.main_weather }}, more precisely {{ weather_data.description }}</p>
+        <p>Temperature: {{ weather_data.temperature }}° C or {{ weather_data.tempC }} K</p>
+        <p>Feels like: {{ weather_data.feels_like }}° C or {{ weather_data.feelC }} K</p>
+        <p>Sunrise: {{ weather_data.sunrise }}</p>
+        <p>Sunset: {{ weather_data.sunset }}</p>
+        <p>Pressure: {{ weather_data.pressure }} hPa</p>
+        <p>Humidity: {{ weather_data.humidity }}%</p>
+        <p>Wind Speed: {{ weather_data.wind_speed }} m/s</p>
+        <p>Visibility: {{ weather_data.visibility }} meters</p>
+        <p>Cloudiness: {{ weather_data.cloudiness }}%</p>
+        <p>Rain (last 1 hour): {{ weather_data.rain }} mm</p>
+        <p>Snow (last 1 hour): {{ weather_data.snow }} mm</p>
+    </div>
+</body>
+</html>

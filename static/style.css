@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 50px;
+    font-family: 'Caprasimo', cursive;
+    font-size: 50px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.weather-details {
+    margin-top: 50px;
+}
+
+.weather-details img {
+    width: 100px;
+}
+
+.weather-details p {
+    font-size: 18px;
+}
